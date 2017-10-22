@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
+import _ from 'lodash'
 import { PageContainer, GreenButton } from '../../components/elements'
 import { LineChart, XAxis, YAxis, CartesianGrid, Line } from 'recharts'
 import { getActiveMaritalAgreement } from './DashboardActions'
@@ -8,7 +10,10 @@ import { getActiveMaritalAgreement } from './DashboardActions'
 const mapStateToProps = (state, ownProps) => {
   console.log('mapStateToProps!');
   console.log(state);
-  return { web3: state.web3 }
+  return { 
+    web3: state.web3,
+    family: state.family,
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -32,7 +37,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    const { authData } = this.props;
+    const { authData, family } = this.props;
     console.log(authData);
     const data = [
       { x: 1, y: 5 },
@@ -42,14 +47,15 @@ class Dashboard extends Component {
       { x: 5, y: 4 }
     ]
     //TODO: check if the user have married
-    const foundMarriageAgreement = false
+    const foundMarriageAgreement = !_.isNull(family.maritalAgreement)
+    const username = _.get(authData, 'name', '')
     return(
       <main>
         <PageContainer>
           {foundMarriageAgreement &&
             <div>
               <h1>Dashboard</h1>
-              <p><strong>Hello, {this.props.authData.name}!</strong> here's your status</p>
+              <p><strong>Hello, {username} !</strong> here's your status</p>
               <h2>Family Wealth</h2>
               <LineChart width={500} height={300} data={data}>
                 <XAxis dataKey="x"/>
@@ -64,7 +70,9 @@ class Dashboard extends Component {
           {!foundMarriageAgreement &&
             <div style={{ textAlign: 'center' }}>
               <h1>Your family is not set up yet</h1>
-              <GreenButton>Add Prenup/Postnup Agreement</GreenButton>
+              <Link to="/onboard">
+                <GreenButton>Add Prenup/Postnup Agreement</GreenButton>
+              </Link>
             </div>
           }
           

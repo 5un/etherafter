@@ -94,3 +94,7 @@ export const InputText = styled.input`
 export const RadioOption = styled.div`
   padding: 10px;
 `
+
+export const Padding20Box = styled.div`
+  padding: 20px;
+`
