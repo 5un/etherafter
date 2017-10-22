@@ -20,7 +20,7 @@ TODO
     - pay children
     - approve children
     - divorce
-- Smart Contract
+- polling
 - Kids
 - Wallet separation
 
