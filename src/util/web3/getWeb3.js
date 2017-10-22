@@ -11,7 +11,7 @@ function web3Initialized(results) {
 
 let getWeb3 = new Promise(function(resolve, reject) {
   // Wait for loading completion to avoid race conditions with web3 injection timing.
-  const alwaysUseFallback = true
+  const alwaysUseFallback = false
   window.addEventListener('load', function(dispatch) {
     var results
     var web3 = window.web3

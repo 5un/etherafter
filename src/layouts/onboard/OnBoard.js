@@ -35,9 +35,9 @@ class OnBoard extends Component {
     authData = this.props
     const defaults = {
       spouse1Name: 'Ethan Chain',
-      spouse1Address: '0x0dd1e632418dadbca6130c61590b150adb6d1818',
+      spouse1Address: '0x8399ee42d68a4923c4a7feaecd1e900d8b4a66e6',
       spouse2Name: 'Emily Ledger',
-      spouse2Address: '0x4b413876b8499baa741a23a64bdcdb5faa5f6619',
+      spouse2Address: '0x4917f16ed613f4e0aa94932b5c41ad48142ba202',
       joinPropertyBeforeMarriage: true,
       joinPropertyAfterMarriage: true,
       divorcePropertyDivisionRatio: 50,
@@ -123,11 +123,11 @@ class OnBoard extends Component {
               <h2>Spouse 2 Information</h2>
               <FormGroup>
                 <Label>Name</Label>
-                <InputText name="spouse1Name" onChange={this.handleTextChanged.bind(this)} defaultValue={defaults.spouse2Name} />
+                <InputText name="spouse2Name" onChange={this.handleTextChanged.bind(this)} defaultValue={defaults.spouse2Name} />
               </FormGroup>
               <FormGroup>
                 <Label>Ethereum Address</Label>
-                <InputText name="spouse1Address" onChange={this.handleTextChanged.bind(this)} defaultValue={defaults.spouse2Address} />
+                <InputText name="spouse2Address" onChange={this.handleTextChanged.bind(this)} defaultValue={defaults.spouse2Address} />
               </FormGroup>
             </div>
           }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import _ from 'lodash'
-import { PageContainer, PrimaryButton, SecondaryButton, Row, Col, H1, H2, H3, H4, BigNumber } from '../../components/elements'
+import { PageContainer, PrimaryButton, SecondaryButton, GrayButton, Row, Col, H1, H2, H3, H4, BigNumber, TextGray } from '../../components/elements'
 import { LineChart, XAxis, YAxis, CartesianGrid, Line, AreaChart, Area, Tooltip } from 'recharts'
 import { getActiveMaritalAgreement } from './DashboardActions'
 import Avatar from 'react-avatar'
@@ -78,6 +78,9 @@ class Dashboard extends Component {
                 <Col style={{ width: '60%' }}>
                   <H2>Net Wealth</H2>
                   <BigNumber>ETH 240,033.00</BigNumber>
+                  <TextGray>
+                    <span>BTC 10,452.00</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>DOGE 9,425</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>XRP 20,541.00</span>
+                  </TextGray>
                   <br />
                   <h2>Income</h2>
                   <AreaChart width={600} height={250} data={data}
@@ -133,7 +136,12 @@ class Dashboard extends Component {
                   <PrimaryButton>+ Add Dependents</PrimaryButton>
                 </Col>
               </Row>
-
+              <br /><br />
+              <Link>
+                <GrayButton>
+                I want out of this marriage
+                </GrayButton>
+              </Link>
               {/* Married to ... for x years */}
             </div>
           }

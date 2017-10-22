@@ -113,6 +113,13 @@ export const SecondaryButton = styled(Button)`
   border: 3px solid #444444;
 `
 
+export const GrayButton = styled(Button)`
+  color: #cccccc;
+  &:hover {
+    color: #555555;
+  }
+  border: 0;
+`
 
 export const InlineImg = styled.img`
   vertical-align: middle;
@@ -146,4 +153,8 @@ export const Padding20Box = styled.div`
 export const BigNumber = styled.div`
   font-size: 48px;
   color: rgb(26,188,156);
+`
+
+export const TextGray = styled.div`
+  color: #cccccc;
 `

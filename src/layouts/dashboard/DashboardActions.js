@@ -14,7 +14,7 @@ export function getActiveMaritalAgreement() {
 
       maritalRegistry.deployed().then(function(instance) {
         console.log('contract deployed. gettin value')
-        instance.getActiveMarriageAgreement.call("0x0dd1e632418dadbca6130c61590b150adb6d1818")
+        instance.getActiveMaritalAgreement.call("0x0dd1e632418dadbca6130c61590b150adb6d1818")
         .then(function(result) {
           console.log('got active marriage value');
           console.log(result);

@@ -33,10 +33,8 @@ ReactDOM.render((
       <Router history={history}>
         <Route path="/" component={App}>
           <IndexRoute component={Home} />
-          <Route path="dashboard" component={Dashboard} />
-          {/*
-            <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
-          */}
+          {/* <Route path="dashboard" component={Dashboard} /> */}
+          <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
           <Route path="profile" component={UserIsAuthenticated(Profile)} />
           <Route path="onboard" component={OnBoard} />
         </Route>

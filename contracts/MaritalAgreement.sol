@@ -27,7 +27,7 @@ contract MaritalAgreement {
     spouseOneAddress = _spouseOneAddress;
     spouseTwoAddress = _spouseTwoAddress;
     owner = _owner;
-    amountInContract += msg.value;
+    // amountInContract += msg.value;
   }
 
     // This is a function called by both the husband and wife to accept the terms of the document denoted by ipfsHash
