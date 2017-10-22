@@ -54,7 +54,7 @@ class OnBoard extends Component {
     this.setState({
       inputs: {
         ...this.state.inputs,
-        [e.target.name]: e.target.val
+        [e.target.name]: e.target.value
       }
     })
   }

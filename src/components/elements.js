@@ -1,5 +1,38 @@
 import styled from 'styled-components'
 
+export const H1 = styled.h1`
+  margin: 0;
+`
+
+export const H2 = styled.h2`
+  margin: 0;
+`
+
+export const H3 = styled.h3`
+  margin: 0;
+`
+
+export const H4 = styled.h4`
+  margin: 0;
+`
+
+export const H5 = styled.h5`
+  margin: 0;
+`
+
+export const P = styled.p`
+  margin: 0;
+`
+
+export const Row = styled.div`
+  display: block;
+`
+
+export const Col = styled.div`
+  display: inline-block;
+  vertical-align: top;
+`
+
 export const Branding = styled.h1`
   font-family: 'Sacramento';
   font-size: 36px;
@@ -70,6 +103,17 @@ export const GreenButton = styled.button`
   transition: all 0.3s;
 `
 
+
+export const PrimaryButton = styled(GreenButton)`
+
+`
+
+export const SecondaryButton = styled(Button)`
+  color: #444444;
+  border: 3px solid #444444;
+`
+
+
 export const InlineImg = styled.img`
   vertical-align: middle;
 `
@@ -97,4 +141,9 @@ export const RadioOption = styled.div`
 
 export const Padding20Box = styled.div`
   padding: 20px;
+`
+
+export const BigNumber = styled.div`
+  font-size: 48px;
+  color: rgb(26,188,156);
 `
